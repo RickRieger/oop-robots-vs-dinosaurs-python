@@ -5,7 +5,7 @@ class Dinosaur:
       self.attack_power = attack_power
       self.attack_name = attack_name
       self.health = 200
-      self.energy_level = 100
+      self.energy = 100
 
   def attack(self, robot):
     pass    

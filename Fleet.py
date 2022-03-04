@@ -4,23 +4,30 @@ class Fleet:
   def __init__(self):
     self.robots = []
     self.weapons = ['laser beam', 'metal purse', 'gatling guns']  
+
   def create_fleet(self, players_choice):
-    print(players_choice)
-    print('Please choose a weapon for johnny_5:')
+    if players_choice == 'a':
+          johnny_5 = Robot(f'johnny_5', self.weapons[0], 30)
+          dot_matrix = Robot(f'dot_matrix', self.weapons[1], 10)
+          ed_209 = Robot(f'ed_209', {self.weapons[2]}, 60)
+    else:  
+      print('\n\nROBOTS ')
+      print('======\n')
+      print('\nPlease choose a weapon for johnny_5:')
 
-    weapon_choice = int(input(f'1. {self.weapons[0]}\n2. {self.weapons[1]}\n3. {self.weapons[2]}\nYour answer: '))
-    johnny_5 = Robot(f'johnny_5', self.weapons[weapon_choice - 1], 30)
-    self.weapons.remove(self.weapons[weapon_choice - 1])
+      weapon_choice = int(input(f'\n1. {self.weapons[0]}\n2. {self.weapons[1]}\n3. {self.weapons[2]}\n\nYour answer: '))
+      johnny_5 = Robot(f'johnny_5', self.weapons[weapon_choice - 1], 30)
+      self.weapons.remove(self.weapons[weapon_choice - 1])
 
-    print('Please choose a weapon for dot_matrix:')
+      print('\nPlease choose a weapon for dot_matrix:')
 
-    weapon_choice = int(input(f'1. {self.weapons[0]}\n2. {self.weapons[1]}\nYour answer: '))
-    dot_matrix = Robot(f'dot_matrix', self.weapons[weapon_choice - 1], 10)
-    self.weapons.remove(self.weapons[weapon_choice - 1])
+      weapon_choice = int(input(f'1. {self.weapons[0]}\n2. {self.weapons[1]}\nYour answer: '))
+      dot_matrix = Robot(f'dot_matrix', self.weapons[weapon_choice - 1], 10)
+      self.weapons.remove(self.weapons[weapon_choice - 1])
 
-    print(f'ed_209 will be assigned this weapon by default ===> {self.weapons[0]}')
+      print(f'\ned_209 will be assigned this weapon by default ===> {self.weapons[0]}\n\n')
 
-    ed_209 = Robot(f'ed_209', {self.weapons[0]}, 60)
+      ed_209 = Robot(f'ed_209', {self.weapons[0]}, 60)
 
     self.robots = [johnny_5, dot_matrix, ed_209]
-
+  
