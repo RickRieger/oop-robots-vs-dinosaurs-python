@@ -1,4 +1,3 @@
-from re import A
 from dinosaur import Dinosaur
 
 class Herd:
