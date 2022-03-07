@@ -3,13 +3,14 @@ from robot import Robot
 class Fleet:
   def __init__(self):
     self.robots = []
-    self.weapons = ['laser beam', 'metal purse', 'gatling guns']  
+    self.weapons = ['A LASER BEAM', 'A METAL PURSE', 'GATLING GUNS']  
 
   def create_fleet(self, players_choice):
+    
     if players_choice == 'a':
-          johnny_5 = Robot(f'johnny_5', self.weapons[0], 30)
-          dot_matrix = Robot(f'dot_matrix', self.weapons[1], 10)
-          ed_209 = Robot(f'ed_209', {self.weapons[2]}, 60)
+          johnny_5 = Robot(f'JOHNNY_5', self.weapons[0], 30)
+          dot_matrix = Robot(f'DOT_MATRIX', self.weapons[1], 10)
+          ed_209 = Robot(f'ED_209', self.weapons[2], 60)
     else:  
       print('\n\nROBOTS ')
       print('======\n')
